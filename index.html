@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Sample Site</title>
+
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.css'>
+    <link rel='stylesheet' href='css/memorygame.css'>
+  </head>
+  <body>
+    <div id='root' style='width: 100%; height: 100%;'>
+      <div class='content-center-aligned-div'>Game of Memory</div>
+      <div class='content-center-aligned-div'>
+        <div class='size-label'>Board size:</div>
+        <input id='size-input' oninput='GM.resetError()' type='text' value='4'/>
+        <input id='start-button' type='button' value='Start' onclick='GM.startClicked()'/>
+      </div>
+      <div id='error-message' class='content-center-aligned-div error-message' style='display: none;'>Only even numbers < 39 and > 0 are accepted</div>
+    </div>
+  </body>
+  <script src='bundle-dev.js'></script>
+</html>
